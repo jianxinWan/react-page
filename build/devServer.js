@@ -1,8 +1,8 @@
 const ApiMocker = require('webpack-api-mocker2')
-
+const path = require('path')
 const proxy = require('./proxy')
 const mockPath = path.resolve(__dirname, '../mocks/mock.json')
-
+const paths = require('./paths')
 module.exports = {
     before(app) {
         ApiMocker(app, mockPath)

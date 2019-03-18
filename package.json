@@ -125,6 +125,7 @@
     "redux-form": "^7.4.2",
     "redux-saga": "^0.16.0",
     "redux-thunk": "^2.2.0",
+    "routers": "^0.1.4",
     "tslint": "^5.11.0",
     "tslint-config-prettier": "^1.15.0",
     "tslint-eslint-rules": "^5.4.0",

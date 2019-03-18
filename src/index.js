@@ -1,16 +1,17 @@
-// import React from 'react'
-// import ReactDOM from 'react-dom'
-// import { AppContainer } from 'react-hot-loader'
+import 'babel-polyfill'
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { AppContainer } from 'react-hot-loader'
 // import { Provider } from 'react-redux'
 
-// import routers from 'routers'
+import routers from 'routers'
 
-// const render = Component => ReactDOM.render(
-//     <AppContainer key={Math.random()}>
-//         {Component}
-//     </AppContainer>,
-//     document.getElementById('app'),
-// )
+const render = Component => ReactDOM.render(
+    <AppContainer key={Math.random()}>
+        <App></App>     
+    </AppContainer>,
+    document.getElementById('app'),
+)
 
-// render(routers)
+render(routers)
 console.log('webpack!')
