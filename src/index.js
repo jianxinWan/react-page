@@ -3,15 +3,13 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
 // import { Provider } from 'react-redux'
+import './common/reset.less'
+import App from './components/App/index'
+// import routers from 'routers'
 
-import routers from 'routers'
-
-const render = Component => ReactDOM.render(
-    <AppContainer key={Math.random()}>
-        <App></App>     
+ReactDOM.render(
+    <AppContainer>
+        <App></App>
     </AppContainer>,
     document.getElementById('app'),
 )
-
-render(routers)
-console.log('webpack!')

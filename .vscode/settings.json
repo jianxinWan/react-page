@@ -1,3 +1,11 @@
 {
-    "git.ignoreLimitWarning": true
+    "git.ignoreLimitWarning": true,
+    "eslint.autoFixOnSave": true,
+    "eslint.provideLintTask": true,
+    "prettier.eslintIntegration": true,
+    "editor.tabSize": 2,
+    "editor.formatOnSave": true,
+    "prettier.semi": false,
+    "prettier.singleQuote": true,
+    "javascript.format.insertSpaceBeforeFunctionParenthesis": true
 }

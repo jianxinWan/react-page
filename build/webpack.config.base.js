@@ -19,16 +19,26 @@ module.exports = {
             {
                 test: /\.css$/,
                 use: [
+                    require.resolve('style-loader'),
                     {
                         loader: MiniCssExtractPlugin.loader,
                         options: {
                             publicPath: '../',
+                            importLoaders: 1
                         }
                     },
                     'css-loader?importLoaders=1',
                     'postcss-loader'
                 ],
                 include: paths.PATH_SRC,
+            },
+            {
+                test: /\.less$/,
+                use: [
+                    'style-loader', 
+                    'css-loader', 
+                    'less-loader',
+                ]
             },
             {
                 test: /\.jsx?$/,
