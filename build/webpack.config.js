@@ -1,17 +1,16 @@
-const webpack  = require('webpack')
+const webpack = require('webpack')
 const merge = require('webpack-merge')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 
 const paths = require('./paths')
-const baseConfig  = require('./webpack.config.base')
+const baseConfig = require('./webpack.config.base')
 const devServer = require('./devServer')
 module.exports = merge(baseConfig, {
     mode: 'development',
     devtool: 'inline-source-map',
     module: {
-        rules: [
-            {
+        rules: [{
                 test: /\.styl$/,
                 use: [
                     'style-loader',
@@ -39,6 +38,7 @@ module.exports = merge(baseConfig, {
         ]
     },
     plugins: [
+        //style jsx
         // 无视指定目录文件，正则下的目录将不会出发重编译
         new webpack.WatchIgnorePlugin([/css\.d\.ts$/]),
         new HtmlWebpackPlugin({
@@ -60,4 +60,4 @@ module.exports = merge(baseConfig, {
         new webpack.HotModuleReplacementPlugin(),
     ],
     devServer,
-}) 
+})

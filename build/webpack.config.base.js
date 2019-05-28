@@ -15,8 +15,7 @@ module.exports = {
         chunkFilename: path.join('js', '[name]-chunk.js'),
     },
     module: {
-        rules: [
-            {
+        rules: [{
                 test: /\.css$/,
                 use: [
                     require.resolve('style-loader'),
@@ -35,8 +34,8 @@ module.exports = {
             {
                 test: /\.less$/,
                 use: [
-                    'style-loader', 
-                    'css-loader', 
+                    'style-loader',
+                    'css-loader',
                     'less-loader',
                 ]
             },
@@ -49,7 +48,7 @@ module.exports = {
                 test: /\.(ts|tsx)?$/,
                 use: 'ts-loader',
                 include: [
-                paths.PATH_SRC,
+                    paths.PATH_SRC,
                 ],
                 exclude: /node_modules/,
             },
@@ -84,7 +83,7 @@ module.exports = {
             },
         },
     },
-    plugins: [ 
+    plugins: [
         // 检测具有循环依赖的模块
         new CircularDependencyPlugin({
             exclude: /node_modules/,
@@ -96,8 +95,8 @@ module.exports = {
         extensions: ['.ts', '.tsx', '.js', '.jsx'],
         // 告诉 webpack 解析模块时应该搜索的目录。
         modules: [
-          path.resolve(paths.PATH_SRC),
-          path.resolve('node_modules'),
+            path.resolve(paths.PATH_SRC),
+            path.resolve('node_modules'),
         ],
     }
 }
