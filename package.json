@@ -104,7 +104,7 @@
     "@types/react-router-dom": "^4.3.1",
     "@types/redux-form": "^7.4.8",
     "awesome-typescript-loader": "^5.2.1",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "clean-webpack-plugin": "^0.1.19",
     "delegate": "^3.2.0",
     "echarts": "^4.0.4",
